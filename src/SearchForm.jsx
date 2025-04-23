@@ -13,7 +13,6 @@ const SearchForm = () => {
 
   return (
     <section>
-      <h1 className="title">Art Institute of Chicago</h1>
       <div>
         <form className="search-form" onSubmit={handleSubmit}>
           <input
@@ -27,14 +26,14 @@ const SearchForm = () => {
             search
           </button>
         </form>
-        {/* <div className="btn-filters-container">
+        <div className="btn-filters-container">
           <button className="btn btn-filters" onClick={toggleAdvancedFilters}>
             Advanced Filters
           </button>
-        </div> */}
+        </div>
       </div>
 
-      {/* {showAdvancedFilters ? <AdvancedFilters /> : null} */}
+      {showAdvancedFilters ? <AdvancedFilters /> : null}
     </section>
   )
 }

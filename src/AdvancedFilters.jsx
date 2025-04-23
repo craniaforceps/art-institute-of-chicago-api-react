@@ -1,10 +1,10 @@
 const AdvancedFilters = () => {
   return (
     <div className="filters-container">
-      {/* <label htmlFor="image-check">
+      <label htmlFor="image-check">
         Only show artworks with image available
       </label>
-      <input type="checkbox" className="form-input check" id="image-check" /> */}
+      <input type="checkbox" className="form-input check" id="image-check" />
 
       <label htmlFor="author-search">Search by Author name</label>
       <input

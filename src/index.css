@@ -14,7 +14,7 @@ html {
 
 :root {
   /* colors */
- --primary-50: #f8f3ee;
+  --primary-50: #f8f3ee;
   --primary-100: #f0e5d8;
   --primary-200: #e2c9b1;
   --primary-300: #d3ac8a;
@@ -49,7 +49,7 @@ html {
   /* rest of the vars */
   --borderRadius: 0.25rem;
   --letterSpacing: 1px;
-  --transition: 0.3s ease-in-out all;
+  --transition: 0.2s ease-in-out all;
   --max-width: 1120px;
   --fixed-width: 600px;
   --view-width: 90vw;
@@ -78,10 +78,10 @@ html {
 body {
   background: var(--backgroundColor);
   color: var(--textColor);
-  transition: var(--darkModeTransition)
+  transition: var(--darkModeTransition);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 400,
+  font-weight: 400;
   line-height: 1;
 }
 p {
@@ -299,21 +299,22 @@ Toggle Container
 ========
 */
 
-.toggle-container {
+/* .toggle-container {
   width: var(--view-width);
   max-width: var(--max-width);
   padding: 1rem 0;
   margin: 0 auto;
   display: flex;
   justify-content: end;
-}
+} */
 
 .dark-toggle {
   background: transparent;
   border-color: transparent;
   width: 5rem;
   height: 2rem;
-  display: grid;
+  margin-top: 1.25rem;
+  display: flex;
   place-items: center;
   cursor: pointer;
 }
@@ -327,7 +328,7 @@ Search Form
 ========
 */
 .title {
-  color: var( --primary-500);
+  color: var(--primary-500);
 }
 .search-form {
   width: var(--view-width);
@@ -365,7 +366,7 @@ Advanced Filters
   max-width: var(--fixed-width);
   margin: 1rem auto;
   padding: 1.5rem;
-  background: var(--white);
+
   border: 1px solid var(--grey-200);
   box-shadow: var(--shadow-2);
   display: grid;
@@ -377,14 +378,14 @@ Advanced Filters
 
 .filters-container label {
   font-weight: 500;
-  color: var(--grey-700);
+
   margin-right: 1rem;
 }
 
 .filters-container .form-input {
   padding: 0.375rem 0.75rem;
   border: 1px solid var(--grey-300);
-  background: var(--white);
+
   transition: var(--transition);
 }
 
@@ -406,7 +407,6 @@ Advanced Filters
 .btn-filters-container {
   padding-top: 1.5rem;
 }
-
 
 /* ========
    Gallery
@@ -451,7 +451,7 @@ Advanced Filters
 .artist {
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: var( --primary-500);
+  color: var(--primary-500);
   font-size: 0.9rem;
   /* Limita texto a 1 linha com ellipsis */
   white-space: nowrap;

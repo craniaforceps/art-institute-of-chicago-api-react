@@ -11,7 +11,7 @@ const Gallery = () => {
     queryKey: ['artworks', searchTerm],
     queryFn: async () => {
       const result = await axios.get(
-        `${url}/search?q=${searchTerm}&fields=id,title,artist_title,image_id,thumbnail,short_description&limit=100`
+        `${url}/search?q=${searchTerm}&fields=id,title,artist_title,image_id,thumbnail,short_description&limit=100&page=2`
       )
 
       return result.data
@@ -32,9 +32,9 @@ const Gallery = () => {
       </section>
     )
   }
-  console.log(response)
-  console.log(response.data)
-  console.log(response.data.data)
+  // console.log(response)
+  // console.log(response.data)
+  // console.log(response.data.data)
 
   const results = response.data.data
 
