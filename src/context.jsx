@@ -7,7 +7,7 @@ const AppContext = createContext()
 export const AppProvider = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(false) //estado do Dark Theme
   const [showAdvancedFilters, setShowAdvancedFilters] = useState(false) //estado dos filtros
-  const [searchTerm, setSearchTerm] = useState('Picasso') //estado do input search
+  const [searchTerm, setSearchTerm] = useState('') //estado do input search
   const [selectedArtwork, setSelectedArtwork] = useState(null)
   const [selectedImage, setSelectedImage] = useState(null)
   //modal

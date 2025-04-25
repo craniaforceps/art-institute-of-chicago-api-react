@@ -7,13 +7,23 @@ import HomeLayout from './pages/HomeLayout'
 import Landing from './pages/Landing'
 import Artwork from './pages/Artwork'
 import About from './pages/About'
-import ErrorPage from './pages/ErrorPage'
+import Error from './pages/Error'
+import { loader as artworkLoader } from './pages/Artwork'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 1000 * 60 * 5,
+    },
+  },
+})
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <HomeLayout />,
-    errorElement: <ErrorPage />,
+    errorElement: <Error />,
     children: [
       {
         index: true,
@@ -24,8 +34,9 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: '/artwork',
+        path: '/artwork/:id',
         element: <Artwork />,
+        loader: artworkLoader(queryClient),
       },
     ],
   },
@@ -33,9 +44,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <main>
+    <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
-    </main>
+    </QueryClientProvider>
   )
 }
 

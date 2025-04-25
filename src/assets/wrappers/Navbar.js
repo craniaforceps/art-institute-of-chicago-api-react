@@ -7,14 +7,13 @@ const Wrapper = styled.nav`
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    padding: 1.5rem 2rem;
   }
   .logo {
-    font-size: clamp(1.5rem, 1.2vw, 3rem);
+    font-size: clamp(1.5rem, 3vw, 3rem);
     color: var(--primary-500);
     font-weight: 700;
     letter-spacing: 2px;
-    margin: 0;
-    height: 5px;
   }
   .nav-links {
     display: flex;
@@ -39,10 +38,10 @@ const Wrapper = styled.nav`
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      display: flex;
     }
     .nav-links {
       flex-direction: row;
+      margin-top: 0;
     }
   }
 `

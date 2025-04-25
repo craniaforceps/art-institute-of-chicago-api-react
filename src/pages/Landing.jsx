@@ -1,5 +1,5 @@
-import Gallery from '../Gallery'
-import SearchForm from '../SearchForm'
+import SearchForm from '../components/SearchForm'
+import Gallery from '../components/Gallery'
 
 const Landing = () => {
   return (

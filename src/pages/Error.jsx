@@ -1,7 +1,7 @@
 import { useRouteError } from 'react-router-dom'
 import Wrapper from '../assets/wrappers/ErrorPage'
 
-const ErrorPage = () => {
+const Error = () => {
   const error = useRouteError()
   console.log(error)
 
@@ -15,4 +15,4 @@ const ErrorPage = () => {
 
   return
 }
-export default ErrorPage
+export default Error
